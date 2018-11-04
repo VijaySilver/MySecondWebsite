@@ -1,0 +1,46 @@
+<?php
+  session_start();
+  if($_SESSION['user']){
+  }
+  else{
+    header("location:index.php");
+  }
+?>
+<?php
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+  $taskid = mysql_real_escape_string($_POST['taskno']);
+  $task_stat = "Assigned";
+  $servicetask = mysql_real_escape_string($_POST['partofvh']);
+  $vehname = mysql_real_escape_string($_POST['vname']);
+  $vehreg = mysql_real_escape_string($_POST['vid']);
+  $duedatework = mysql_real_escape_string($_POST['dateofcomp']);
+  $schdate = mysql_real_escape_string($_POST['datefixed']);
+  $assigned_emp = mysql_real_escape_string($_POST['assemp']);
+  $emp_id = mysql_real_escape_string($_POST['empid']);
+  $sparereq = mysql_real_escape_string($_POST['spno']);
+  $sparepart = mysql_real_escape_string($_POST['part']);
+  $quantity = mysql_real_escape_string($_POST['quant']);
+  $bool = true;
+  mysql_connect("localhost", "root","") or die(mysql_error()); //Connect to server
+  mysql_select_db("search_data") or die("Cannot connect to database"); //Connect to database
+  $query = mysql_query("Select * from workorders"); //Query the feedbackk table
+  while($row = mysql_fetch_array($query)) //display all rows from query
+  {
+  	$table_feedbackk = $row['task_no']; // the first username row is passed on to $table_users, and so on until the query is finished
+    if($vehreg == $table_feedbackk) // checks if there are any matching fields
+    {
+      $bool = false; // sets bool to false
+      Print '<script>alert("Task No already exists. Cannot be the same");</script>'; //Prompts the user
+      Print '<script>window.location.assign("workordertasks.php");</script>'; // redirects to feedback.php
+    }
+  }
+  if($bool) // checks if bool is true
+  {
+    	mysql_query("INSERT INTO workorders (task_no, task_status, task_desc, vehicle_name, registrationnum, duedate, sch_date, emp_forthistask, empid, spare_part, spare_quant) 
+    	VALUES ('$taskid','$task_stat','$servicetask','$vehname','$vehreg','$duedatework','$schdate','$assigned_emp','$emp_id','$sparepart','$quantity')");
+/*    mysql_query("UPDATE vehicledata SET dateofpurchase='$purchdate', purchasefrom='$purchfrom', purcinvoice='$purchinvoice', purvalue='$purchvalue', 	odometeratpur='$odometer', warrantydate='$warrantydate', warrantymileage='$warrantymileage', depreciation='$deprepercent', depperiod='$depreperiod' WHERE registrationnum='$vehreg'"); *///Inserts the value to table users
+    Print '<script>alert("Successfully Saved!");</script>'; // Prompts the user
+    Print '<script>window.location.assign("workordertasks.php");</script>'; // redirects to register.php
+  }
+}
+?>

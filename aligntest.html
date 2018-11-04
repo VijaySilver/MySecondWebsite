@@ -1,0 +1,29 @@
+<html>
+<style>
+.fields {width: 500px;}
+.fields > label { display:inline-block; width:150px; font-weight:bold; vertical-align:top; }
+.fields > span { display: inline-block; }
+</style>
+<body>
+<form>
+<label for="name">Your name:</label><input type="text" name="name" /><br />
+<label for="email">Email address:</label><input type="text" name="email" /><br />
+</form>
+<form action="send-form.php" id="form" method="post" name="form">
+    <div class="fields">
+        <label>Your name:</label>
+        <span><input id="name" name="name" size="35" type="text" value="" /></span>
+    </div>
+<br/>
+    <div class="fields">
+        <label>Email Address:</label>
+        <span><input id="email" maxlength="5" name="email" size="35" type="text" /></span>
+    </div>
+<br/>
+    <div class="fields">
+        <label>Comments:</label>
+        <span><textarea></textarea></span>
+    </div>    
+</form>
+</body>
+</html>

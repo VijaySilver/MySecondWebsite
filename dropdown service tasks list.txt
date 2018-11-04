@@ -1,0 +1,71 @@
+Test Electrics (battery, alternator, starter motor)			
+Top up power steering fluid			
+Full brake inspection			
+Check Windscreen wipers			
+Check Windscreen washers			
+Check Seat belts			
+Check Front windscreen			
+			
+Check diagnostic trouble codes			
+Check hand brake			
+			
+Check bonnet			
+Check drive shaft joints and gaiters			
+Check steering, suspension linkages and ball joints			
+Check shock absorbers			
+Check exhaust system and mountings			
+Check engine, transmission and rear axle			
+Check radiator and coolant hoses			
+Check auxiliary drive belt			
+Check wheel bearings			
+Check wheel balancing			
+Check wheel alignment			
+Check mirrors			
+Check doors			
+Check interior lights			
+Check fuel pipes			
+Check wiring
+
+Change the engine oil
+Replace the oil filter
+Replace the air filter
+Replace the fuel filter
+Replace the spark plugs
+Tune the engine
+Check level and refill brake fluid
+Check level and refill power steering fluid
+Check level and refill Automatic Transmission Fluid
+Grease and lubricate components
+Inspect and replace the timing belt if needed
+Check tyres (tread & pressure)
+Inspect Clutch
+Inspect Gearbox
+Inspect Car Battery
+Inspect Engine components 
+Top up windscreen washer fluid			
+Top up coolant levels and check strength and condition	
+
+Service/Maintenance Task:<select name="partofvh">
+<option value="Change the engine oil">Change the engine oil</option>
+<option value="Replace the oil filter">Replace the oil filter</option>
+<option value="Replace the air filter">Replace the air filter</option>
+<option value="Replace the fuel filter">Replace the fuel filter</option>
+<option value="Replace the spark plugs">Replace the spark plugs</option>
+<option value="Tune the engine">Tune the engine</option>
+<option value="Top up windscreen washer fluid">Top up windscreen washer fluid</option>
+<option value="Top up coolant levels and check strength and condition">Top up coolant levels and check strength and condition</option>
+<option value="Check shock absorbers">Check shock absorbers</option>
+<option value="Check level and refill brake fluid">Check level and refill brake fluid</option>
+<option value="Check level and refill power steering fluid">Check level and refill power steering fluid</option>
+<option value="Check level and refill Automatic Transmission Fluid">Check level and refill Automatic Transmission Fluid</option>
+<option value="Grease and lubricate components">Grease and lubricate components</option>
+<option value="Inspect and replace the timing belt if needed">Inspect and replace the timing belt if needed</option>
+<option value="Check tyres (tread & pressure)">Check tyres (tread & pressure)</option>
+<option value="Inspect Clutch">Inspect Clutch</option>
+<option value="Inspect Gearbox">Inspect Gearbox</option>
+<option value="Test Car Battery">Test Car Battery</option>
+<option value="Inspect Engine components">Inspect Engine components</option>
+</select>
+
+
+
